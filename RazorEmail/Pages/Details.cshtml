@@ -1,0 +1,43 @@
+﻿@page
+@model RazorEmail.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Message</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Message.To)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Message.To)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Message.From)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Message.From)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Message.Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Message.Text)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Message.Subject)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Message.Subject)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Message.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
